@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/lay_icn_artist"
+            android:title="个人信息"/>
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/music_icn_local"
+            android:title="回到手机"/>
+    </group>
+</menu>

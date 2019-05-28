@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_page_one"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.asus.qqapp.PageOneActivity">
+
+    <RelativeLayout
+        android:id="@+id/toobar"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:background="@color/colorPrimary">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="我的"
+                android:textColor="@color/white"
+                android:textStyle="bold"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/menu_imageView"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/maintabbar_button_setting_normal"/>
+
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/local_search_icon_normal"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:id="@+id/imageView2"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/white"
+        android:onClick="goPlayerActivity">
+
+        <ImageView
+            android:id="@+id/music_thumbnail"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_margin="8dp"
+            android:src="@drawable/nanhai"/>
+
+        <ImageView
+            android:id="@+id/play_list"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_alignParentRight="true"
+            android:padding="8dp"
+            android:src="@drawable/minibar_btn_playlist_normal"/>
+
+        <ImageView
+            android:id="@+id/play_or_pause"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:layout_toLeftOf="@id/play_list"
+            android:onClick="playOrPause"
+            android:padding="8dp"
+            android:src="@drawable/ring_btnplay"/>
+
+
+        <TextView
+            android:id="@+id/music_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_toLeftOf="@id/play_or_pause"
+            android:layout_toRightOf="@id/music_thumbnail"
+            android:ellipsize="end"
+            android:text="男孩"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/music_name"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="8dp"
+            android:text="左右横划可切换上下首"
+            android:textColor="@color/colorPrimary"/>
+    </RelativeLayout>
+
+    <com.youth.banner.Banner
+        android:id="@+id/banner"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_below="@+id/toobar"
+        android:layout_alignParentStart="true"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="45dp"
+        android:orientation="horizontal">
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:orientation="vertical"
+        android:id="@+id/linearLayout"
+        android:layout_below="@+id/banner"
+        android:layout_alignParentStart="true">
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/login_imageview"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/youkelogin"
+            android:layout_marginTop="-10dp"/>
+
+    <TextView
+        android:id="@+id/tv_loginName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="XXX"
+        android:textSize="20dp"
+        android:gravity="center"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=":"
+        android:layout_marginLeft="15dp"
+        android:textSize="20dp"
+        style="bold"
+        />
+
+</LinearLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="欢迎您使用此音乐播放器！"
+            android:textSize="20dp"
+            android:id="@+id/textView2"
+            android:layout_below="@+id/linearLayout"
+            android:layout_alignParentStart="true"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/actionbar_music_normal"/>
+        <TextView
+            android:id="@+id/l_bendi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="本地歌曲"
+            android:layout_marginLeft="60dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="end"
+        android:layout_below="@+id/linearLayout"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="45dp"
+            android:layout_marginEnd="50dp"
+            android:src="@drawable/mymusic_icon_favorite_normal"/>
+
+        <TextView
+            android:id="@+id/l_quku"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="我的收藏"
+            android:gravity="end"
+            android:layout_marginTop="42dp"
+            android:layout_marginEnd="60dp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
